@@ -150,8 +150,51 @@ def main():
     print("="*50)
     
     visualizer = GraphVisualizer()
-    visualizer.create_sample_graph()
-    visualizer.display_graph_structure()
+    
+    # Choose graph type
+    while True:
+        print("\nOptions:")
+        print("1. Use sample graph")
+        print("2. Create custom graph")
+        print("3. Exit")
+        
+        choice = input("\nEnter your choice (1-3): ").strip()
+        
+        if choice == '1':
+            visualizer.create_sample_graph()
+            visualizer.display_graph_structure()
+            break
+        elif choice == '2':
+            print("\n" + "="*50)
+            print("CREATE CUSTOM GRAPH")
+            print("="*50)
+            print("\nEnter edges (format: u v). Type 'done' when finished.")
+            print("Example: 0 1 (connects node 0 to node 1)")
+            print("\nTip: Draw your graph on paper first!")
+            visualizer.graph = {}
+            
+            while True:
+                edge = input("\nEdge: ").strip()
+                if edge.lower() == 'done':
+                    break
+                try:
+                    u, v = map(int, edge.split())
+                    visualizer.add_edge(u, v)
+                    print(f"  ✓ Added edge {u} - {v}")
+                except:
+                    print("  ✗ Invalid input! Use format: u v")
+            
+            if visualizer.graph:
+                print("\n✓ Custom graph created!")
+                visualizer.display_graph_structure()
+                break
+            else:
+                print("\n✗ No graph created! Try again.")
+        elif choice == '3':
+            print("\nGoodbye! 👋")
+            return
+        else:
+            print("✗ Invalid choice!")
     
     # Choose algorithm
     while True:
