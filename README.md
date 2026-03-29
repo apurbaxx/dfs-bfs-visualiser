@@ -4,11 +4,11 @@ A simple Python-based visualizer for BFS (Breadth-First Search) and DFS (Depth-F
 
 ## Features
 
-- 📊 Visual representation of graph traversal
-- 🎨 Color-coded nodes (red = current, green = visited, blue = unvisited)
-- 📝 Step-by-step traversal output
-- 🚀 Easy to use and understand
-- 🌳 Pre-built sample graph for instant demonstration
+- Visual representation of graph traversal
+-  Color-coded nodes (red = current, green = visited, blue = unvisited)
+-  Step-by-step traversal output
+-  Easy to use and understand
+-  Pre-built sample graph for instant demonstration
 
 ## Requirements
 
@@ -72,13 +72,5 @@ Available nodes: 0, 1, 2, 3, 4, 5, 6, 7
 algorithm visualiser/
 ├── graph_visualizer.py  # Main program
 ├── README.md           # Documentation
-└── GUIDE.md           # Usage examples
 ```
 
-## Author
-
-Created for VIT SEM-2 CSA-2001 Fundamentals in AI and ML
-
-## License
-
-Free to use for educational purposes
